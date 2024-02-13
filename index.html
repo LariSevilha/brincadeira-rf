@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sim/não</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <style>
+          .no {
+              position: absolute;
+          }
+        body {
+            background-color: #f370bc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        h5 {
+            font-size: 24px;
+            color: #ffff; 
+        }
+
+        .yes, .no {
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .yes {
+            background-color: #940000;
+            color: white;
+        }
+
+        .yes:hover {
+            background-color: #da2048;
+        }
+
+        .no {
+            background-color: #000000;
+            color: white;
+        }
+
+        .no:hover {
+            background-color: #d32f2f;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #770000;
+            color: #fff;  
+            text-align: center;
+            padding: 20px 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h5 class="text-center mt-5">Aceita uns beijinhos?</h5>
+        <button type="button" class="btn btn-success yes">Sim</button>
+        <button type="button" class="btn btn-danger no">Não</button>
+    </div>
+    <footer>
+        <p>Feito com carinho e um montão de saudade <3 </p>
+    </footer>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var yesButton = document.querySelector('.yes');
+    var noButton = document.querySelector('.no');
+
+    yesButton.addEventListener('click', function() {
+        alert('Fiz por gracinha mas to com saudades');
+        window.open('gatos.jpg'); 
+    });
+
+    noButton.addEventListener('mouseover', function() {
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random() * window.innerHeight;
+        noButton.style.left = x + 'px';
+        noButton.style.top = y + 'px';
+    });
+});
+</script>
+</html>
